@@ -14,3 +14,16 @@ function DBConnect()
         $config['password']
     );
 }
+
+function DBQuery($sql)
+{
+    DBConnect();
+    $res = mysql_query($sql);
+
+    $ret = [];
+    while ($row = mysql_fetch_assoc($res))
+    {
+        $ret[] = $row;
+    }
+    return $ret;
+}
