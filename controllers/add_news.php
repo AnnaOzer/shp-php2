@@ -1,3 +1,3 @@
 <?php
 
-echo 'это add_news.php';
+header('Location: ../index.php');
