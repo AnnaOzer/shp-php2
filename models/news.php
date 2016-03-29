@@ -8,3 +8,10 @@ function News_getAll()
     SELECT * FROM news
     ");
 }
+
+function News_addOne($article)
+{
+    return DBExec("
+    INSERT INTO `news`(`title`, `text`) VALUES ('" . $article['title'] . "', '" .$article['text']. "')
+    ");
+}
