@@ -13,6 +13,8 @@ function DBConnect()
         $config['db']['user'],
         $config['db']['password']
     );
+
+    mysql_select_db($config['db']['dbname']);
 }
 
 function DBQuery($sql)
