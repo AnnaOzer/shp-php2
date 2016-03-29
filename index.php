@@ -1,15 +1,7 @@
 <?php
 
-// заглушка новостей
-$news = [
-    [
-        'title'=>'Первая новость',
-        'text'=>'В лесу родилась ёлочка',
-    ],
-    [
-        'title'=>'Вторая новость',
-        'text'=>'В лесу она росла',
-    ],
-];
+require_once 'models/news.php';
+
+$news = News_getAll();
 
 include 'view/index.php';
