@@ -1,6 +1,6 @@
 <?php
 
-require_once '../functions/db.php';
+require_once __DIR__ . '/../functions/db.php';
 
 function News_getAll()
 {

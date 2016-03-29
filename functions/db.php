@@ -2,16 +2,16 @@
 
 function config()
 {
-    return include '../config.php';
+    return include __DIR__ . '/../config.php';
 }
 
 function DBConnect()
 {
     $config = config();
     mysql_connect(
-        $config['host'],
-        $config['user'],
-        $config['password']
+        $config['db']['host'],
+        $config['db']['user'],
+        $config['db']['password']
     );
 }
 
@@ -19,6 +19,10 @@ function DBQuery($sql)
 {
     DBConnect();
     $res = mysql_query($sql);
+
+    if(!$res) {
+        return [];
+    }
 
     $ret = [];
     while ($row = mysql_fetch_assoc($res))
