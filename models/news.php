@@ -9,6 +9,13 @@ function News_getAll()
     ");
 }
 
+function News_getById($id)
+{
+    return DBQuery("
+    SELECT * FROM news WHERE id=" . $id
+    )[0];
+}
+
 function News_addOne($article)
 {
     return DBExec("
