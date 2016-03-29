@@ -34,3 +34,16 @@ function DBQuery($sql)
     }
     return $ret;
 }
+
+function DBExec($sql)
+{
+    DBConnect();
+    $res = mysql_query($sql);
+
+    if(false === $res) {
+        echo mysql_error();
+        return false;
+    }
+
+    return true;
+}
