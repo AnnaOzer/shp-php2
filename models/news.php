@@ -22,3 +22,10 @@ function News_addOne($article)
     INSERT INTO `news`(`title`, `text`) VALUES ('" . $article['title'] . "', '" .$article['text']. "')
     ");
 }
+
+function News_updateOneById($article)
+{
+    return DBExec("
+    UPDATE `news` SET `title`='". $article['title'] ."', `text`='". $article['text'] ."'  WHERE id='" .$article['id']. "'
+    ");
+}

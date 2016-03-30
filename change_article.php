@@ -11,3 +11,4 @@ $article = News_getById($id);
 // показать статью, в экшен перенаправить на обработчик
 include 'view/form_change.php';
 
+
