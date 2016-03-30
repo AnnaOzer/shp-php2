@@ -9,3 +9,4 @@ $id = !empty($_GET['id']) ? $_GET['id'] : 1;
 $article = News_getById($id);
 
 // вывести эту одну новость
+include 'view/one_article.php';

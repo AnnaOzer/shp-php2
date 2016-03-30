@@ -3,11 +3,11 @@
     <title>Новости</title>
 </head>
 <body>
-    <?php foreach ($news as $article): ?>
+<?php foreach ($news as $article): ?>
     <article>
         <h1><?=$article['title']; ?></h1><!--есть также тег header для заголовка-->
         <div><?=$article['text']; ?></div>
     </article>
-    <?php endforeach;  ?>
+<?php endforeach;  ?>
 </body>
 </html>
