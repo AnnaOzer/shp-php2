@@ -11,9 +11,9 @@ function News_getAll()
 
 function News_getById($id)
 {
-    return DBQuery("
+    return DBQueryOne("
     SELECT * FROM news WHERE id=" . $id
-    )[0];
+    );
 }
 
 function News_addOne($article)

@@ -35,6 +35,10 @@ function DBQuery($sql)
     return $ret;
 }
 
+function DBQueryOne($sql) {
+    return DBQuery($sql)[0];
+}
+
 function DBExec($sql)
 {
     DBConnect();

@@ -13,5 +13,5 @@ if(null === $article && isset($_GET['id'])) {
     include __DIR__ . '/view/404.php';
 } else {
 // вывести эту одну новость
-    include 'view/one_article.php';
+    include __DIR__ .'/view/one_article.php';
 }
