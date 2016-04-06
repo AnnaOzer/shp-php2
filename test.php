@@ -23,7 +23,20 @@ class Article
 
 }
 
-$art = new Article;
+class RepostArticle
+    extends Article
+{
+    public $source;
+
+    public function __construct($title, $text, $source)
+    {
+        $this->title = $title;
+        $this->text = $text;
+        $this->source = $source;
+    }
+}
+
+$art = new RepostArticle("Супер новость", "Текст статьи", "BBC");
 
 ?>
 
