@@ -36,6 +36,11 @@ class RepostArticle
 
     public function getTextCount()
     {
+        // вызов метода предка
+        echo '(Старое значение было бы:';
+        echo parent::getTextCount();
+        echo ') ';
+
         return 42;
     }
 }
