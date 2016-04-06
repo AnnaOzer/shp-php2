@@ -8,11 +8,10 @@ class Article
     public $title;
     public $text;
 
-    public function __construct($title, $text)
+    public function __construct($title='', $text='')
     {
         $this->title = $title;
         $this->text = $text;
-        echo 'Создана новость на ' . $this->getTextCount() . ' знаков';
     }
 
     // доступный для всех метод подсчитывает сколько символов в тексте новости
@@ -24,7 +23,7 @@ class Article
 
 }
 
-$art = new Article("Супер новость!", "Текст новости");
+$art = new Article();
 
 ?>
 
