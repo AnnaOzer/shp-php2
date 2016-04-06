@@ -1,6 +1,9 @@
 <?php
 
 class Article {
+    /**
+     * @var string
+     */
     public $title;
     public $text;
 }
