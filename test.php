@@ -33,6 +33,11 @@ class RepostArticle
         $this->source = $source;
         parent::__construct($title, $text);
     }
+
+    public function getTextCount()
+    {
+        return 42;
+    }
 }
 
 $art = new RepostArticle("Супер новость", "Текст статьи", "BBC");
