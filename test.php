@@ -23,7 +23,7 @@ class Article
 
 }
 
-$art = new Article();
+$art = new Article;
 
 ?>
 
