@@ -30,9 +30,8 @@ class RepostArticle
 
     public function __construct($title, $text, $source)
     {
-        $this->title = $title;
-        $this->text = $text;
         $this->source = $source;
+        parent::__construct($title, $text);
     }
 }
 
