@@ -9,4 +9,9 @@ $art = new Article;
 $art->title = "Супер новость!";
 $art->text = "Текст новости";
 
-var_dump($art);
+?>
+
+<article>
+    <header><?=$art->title; ?></header>
+    <div><?=$art->text; ?></div>
+</article>
