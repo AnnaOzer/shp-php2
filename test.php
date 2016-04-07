@@ -5,7 +5,7 @@ class Article
     /**
      * @var string
      */
-    public $title;
+    protected $title;
     public $text;
 
     public function __construct($title='', $text='')
@@ -21,6 +21,10 @@ class Article
         return strlen($this->text);
     }
 
+    public function getTitle()
+    {
+        return $this->title;
+    }
 }
 
 class RepostArticle
@@ -50,7 +54,7 @@ $art = new RepostArticle("Супер новость", "Текст статьи",
 ?>
 
 <article>
-    <header><?=$art->title; ?></header>
+    <header><?=$art->getTitle(); ?></header>
     <div><?=$art->text; ?></div>
     <p>Число знаков: <?=$art->getTextCount(); ?></p>
 </article>
