@@ -5,26 +5,23 @@ class Article
     /**
      * @var string
      */
-    protected $title;
+    public $title;
     public $text;
+
+    protected $textCount;
 
     public function __construct($title='', $text='')
     {
         $this->title = $title;
         $this->text = $text;
+        $this->textCount = strlen($this->text);
     }
 
-    // доступный для всех метод подсчитывает сколько символов в тексте новости
     public function getTextCount()
     {
-        // число символов в свойстве text данного объекта
-        return strlen($this->text);
+        return $this->textCount;
     }
 
-    public function getTitle()
-    {
-        return $this->title;
-    }
 }
 
 class RepostArticle
