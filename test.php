@@ -22,6 +22,11 @@ class Article
         return $this->textCount;
     }
 
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
 }
 
 class RepostArticle
